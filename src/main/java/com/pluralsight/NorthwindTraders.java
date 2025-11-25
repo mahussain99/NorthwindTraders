@@ -3,8 +3,8 @@ package com.pluralsight;
 import java.sql.*;
 
 public class NorthwindTraders {
-    public static void main(String[] args) throws SQLException {
-
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+        Class.forName("com.mysql.cj.jdbc.Driver");
         //  Step 1 connecting with database
 
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/northwind",
